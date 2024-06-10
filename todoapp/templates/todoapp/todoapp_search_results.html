@@ -1,0 +1,76 @@
+{% extends 'todoapp/styles.html' %}
+{% block content %}
+
+<!--<style>-->
+<!--  table {-->
+<!--    width: 80%;-->
+<!--    margin:auto;-->
+<!--  }-->
+<!--  .deadline_col{-->
+<!--      width:150px;-->
+<!--  }-->
+<!--  table td {-->
+<!--    word-wrap: break-word;-->
+<!--  }-->
+<!--  table th, table td {-->
+<!--    border: 1px solid black;-->
+<!--    padding: 8px;-->
+<!--    text-align: left;-->
+<!--  }-->
+<!--</style>-->
+<body>
+    <div class="header-bar">
+    <h2>Search Result</h2>
+</div>
+    {% if todo_items %}
+    <table class="table-whole">
+        <thead>
+        <tr>
+          <th class="item_col">Todo Item</th>
+          <th class="description_col">Description</th>
+          <th class="deadline_col">Deadline</th>
+          <th></th>
+          <th></th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for todo_item in todo_items %}
+            <tr>
+                <td>{{ todo_item.title }}</td>
+                <td>{{ todo_item.description }}</td>
+                <td>{{ todo_item.deadline }}</td>
+                <td>
+                    <form action="{% url 'todoapp:todoapp_update' todo_item.id %}" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="todo_id" value="{{ todo_item.id }}">
+                    <button class="button-update" type="submit"><i class="fa-solid fa-pen-to-square"></i></button>
+                  </form>
+                </td>
+                <td>
+                    <form action="{% url 'todoapp:todoapp_delete' todo_item.id %}" method="post" onsubmit="return confirmDelete()">
+                    {% csrf_token %}
+                    <input type="hidden" name="todo_id" value="{{ todo_item.id }}">
+                    <button class="button-delete" type="submit"><i class="fa-solid fa-trash"></i></button>
+                  </form>
+                </td>
+            </tr>
+
+            {% endfor %}
+        </tbody>
+    </table>
+
+<script>
+    function confirmDelete() {
+        return confirm("Do you want to delete this item?");
+    }
+</script>
+
+{% else %}
+    <p>can not find the todo list</p>
+{% endif %}
+
+<p>return to your todo list <a href="/todoapp/">return</a></p>
+</body>
+
+
+{% endblock content %}

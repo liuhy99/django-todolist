@@ -1,0 +1,16 @@
+{% extends 'todoapp/styles.html' %}
+{% block content %}
+<html>
+    <title>This is title page of my site</title>
+<body>
+    <div class="header-bar">
+        <h1>Welcome To My Project!</h1>
+    </div>
+    <div class="page">
+        <p>Login here and start your own todo list! <a href="{% url 'login' %}?next=/todoapp/"><i class="fa-solid fa-clipboard-list">Todo App</i></a></p>
+
+    </div>
+
+</body>
+</html>
+{% endblock content %}

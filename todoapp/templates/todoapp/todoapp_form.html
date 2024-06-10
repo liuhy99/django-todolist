@@ -1,0 +1,37 @@
+{% extends 'todoapp/styles.html' %}
+{% block content %}
+<div class="header-bar">
+    <h2>From</h2>
+</div>
+<div class="page">
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <th><strong>title: </strong></th>
+                <td>{{ form.title }}</td>
+                {% for error in form.title.errors %}
+                     {% if 'at least 5 characters' in error %}
+                            <p style="color: red;">{{ error }}</p>
+                     {% endif %}
+                {% endfor %}
+            </tr>
+            <tr>
+                <th><strong>description: </strong></th>
+                <td>{{ form.description }}</td>
+            </tr>
+
+            <tr>
+                <th><strong>deadline: </strong></th>
+                <td>{{ form.deadline }}</td>
+
+            </tr>
+
+
+        </table>
+        <input type="submit" value="Submit">
+        <input type="submit" onclick="window.location='{% url 'todoapp:all' %}' ; return false;" value="Cancel">
+    </form>
+</div>
+
+{% endblock content %}

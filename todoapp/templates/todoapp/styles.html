@@ -1,0 +1,156 @@
+<html>
+    <head>
+        <title>Todo App</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@200&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/202c0133b1.js" crossorigin="anonymous"></script>
+        <style>
+            body{
+                background-color: #fff0e5;
+                font-family: 'Exo 2', sans-serif;
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+
+            .container{
+                max-width: 80%;
+                margin:auto;
+                background-color:#fff;
+                -webkit-box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+                box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+            }
+            .header-bar {
+                display: flex;
+                color: #fff;
+                padding: 60px;
+                border-radius: 5px 5px 0 0;
+                background: linear-gradient(to right, #ff6f0f, #ffcd42);
+            }
+            .header-title{
+                flex-basis: 90%;
+            }
+            .header-bar a {
+                color: blue;
+                text-decoration: none;
+            }
+            .search-add-wrapper {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px 20px 0px 100px;
+            }
+            .search-add-wrapper input {
+                border: 1px solid #757575;
+                border-radius: 5px;
+                padding: 10px;
+                width: 70%;
+            }
+            .add{
+                  padding-left: 250px;
+              }
+            ::placeholder {
+                font-weight: 300;
+                opacity: 0.5;
+            }
+            .search-add-wrapper button{
+                border: 1px solid #757575;
+                background-color: #FFF;
+                color: #EB796F;
+                padding: 10px;
+                font-size: 14px;
+                border-radius: 5px;
+                cursor: pointer;
+                text-decoration: none;
+            }
+            .search-add-wrapper button:hover{
+                background-color: yellow;
+            }
+            .table-whole{
+                width:80%;
+                margin: 0 auto;
+                border:none;
+                padding-bottom:20px;
+            }
+            .description_col{
+                width:40%;
+            }
+            .table-whole thead th{
+                background-color:#f6f0fc;
+                color:#8493a5;
+                font-size:17px;
+            }
+            .table-whole th,td{
+                border-botton: 1px solid #dddddd;
+                word-break: break-all;
+                text-align: center;
+            }
+            .table-whole tr:hover td{
+                background-color:#f6f9fc;
+            }
+            .button-update{
+                border: 1px solid #757575;
+                background-color: #0298cf;
+                color: white;
+                padding: 7px;
+                font-size: 14px;
+                border-radius: 5px;
+                cursor: pointer;
+                text-decoration: none;
+            }
+            .button-delete{
+                border: 1px solid #757575;
+                background-color: #FE7E6B;
+                color: white;
+                padding: 7px;
+                font-size: 14px;
+                border-radius: 5px;
+                cursor: pointer;
+                text-decoration: none;
+            }
+            .status-btn {
+                border-radius: 50%;
+                width: 15px;
+                height: 15px;
+                background-color: gray;
+                color: white;
+                border: none;
+                cursor: pointer;
+              }
+              .status-btn.completed {
+                background-color: green;
+              }
+              .pagination{
+                  display:flex;
+                  justify-content:end;
+                  padding:10px 20px;
+              }
+              .pagination div{
+                  padding:10px;
+                  height:20px;
+                  width:20px;
+                  display:flex;
+                  justify-content:center;
+                  align-items:center;
+              }
+              .page{
+                  width:80%;
+                  height:40%;
+                  padding: 60px;
+                  padding-bottom: 30px;
+              }
+
+
+        </style>
+
+    </head>
+    <body>
+        <div class="container">
+            {% block content %}
+
+            {% endblock content %}
+
+        </div>
+    </body>
+</html>
