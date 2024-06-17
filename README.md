@@ -28,7 +28,7 @@ The Home Page provides basic information and navigation of the website. Its main
 
 <img src="images/1homepage.png" width="80%" height="400">
 <img src="images/2todoapp-login.png" width="80%" height="400">
-<img src="images/3todoapp.png" width="80%" height="400">
+<img src="images/3todoapp.png" width="80%" height="600">
 <img src="images/4add&update.png" width="80%" height="400">
 <img src="images/5delete.png" width="80%" height="400">
 <img src="images/6search1.png" width="80%" height="200">
