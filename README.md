@@ -1,4 +1,4 @@
-<h1 align="center">Django-Todolist</h1>
+<h1 align="center">Django Todolist</h1>
 
 ### :page_facing_up: Introduction
 
