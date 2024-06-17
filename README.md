@@ -2,7 +2,7 @@
 
 ### :page_facing_up: Introduction
 
-The website is a multi-purpose web application based on the Django framework with an integrated to-do management system, designed to provide a simple and easy-to-use user experience.
+The website is a multi-purpose web application based on the Django framework and Python with an integrated to-do management system, designed to provide a simple and easy-to-use user experience.
 
 
 
