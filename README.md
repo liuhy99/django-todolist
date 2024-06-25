@@ -19,6 +19,7 @@ The To-do Management System helps users manage daily tasks. Its specific functio
     Select List: Users can view all to-do tasks, sorted by priority and deadline.
 
 Home Page (Home)
+
 The Home Page provides basic information and navigation of the website. Its main functions include:
 
     Personalized Content: Displays the user's personalized information and statistics.
